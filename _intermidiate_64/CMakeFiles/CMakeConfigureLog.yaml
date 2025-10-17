@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       The system is: Windows - 10.0.19045 - AMD64
   -
@@ -16,7 +16,7 @@ events:
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -57,7 +57,7 @@ events:
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler:  
@@ -67,7 +67,7 @@ events:
       The output was:
       0
       ╨Т╨╡╤А╤Б╨╕╤П MSBuild 17.11.9+a69bbaaf5 ╨┤╨╗╤П .NET Framework
-      ╨б╨▒╨╛╤А╨║╨░ ╨╜╨░╤З╨░╤В╨░ 17.10.2025 14:21:53.
+      ╨б╨▒╨╛╤А╨║╨░ ╨╜╨░╤З╨░╤В╨░ 17.10.2025 15:08:59.
       
       ╨Я╤А╨╛╨╡╨║╤В "D:\\project\\WorkoutServer\\_intermidiate_64\\CMakeFiles\\4.1.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" ╨▓ ╤Г╨╖╨╗╨╡ 1 (╤Ж╨╡╨╗╨╡╨▓╤Л╨╡ ╨╛╨▒╤К╨╡╨║╤В╤Л ╨┐╨╛ ╤Г╨╝╨╛╨╗╤З╨░╨╜╨╕╤О).
       PrepareForBuild:
@@ -96,7 +96,7 @@ events:
           ╨Я╤А╨╡╨┤╤Г╨┐╤А╨╡╨╢╨┤╨╡╨╜╨╕╨╣: 0
           ╨Ю╤И╨╕╨▒╨╛╨║: 0
       
-      ╨Я╤А╨╛╤И╨╗╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╕ 00:00:01.09
+      ╨Я╤А╨╛╤И╨╗╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╕ 00:00:00.62
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -113,7 +113,7 @@ events:
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -173,7 +173,7 @@ events:
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -281,7 +281,7 @@ events:
     backtrace:
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -339,7 +339,7 @@ events:
     backtrace:
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_MT"
     description: "Path to a program."
@@ -447,7 +447,7 @@ events:
     backtrace:
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -508,7 +508,7 @@ events:
       - "D:/Cmake/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:547 (__windows_compiler_msvc_enable_rc)"
       - "D:/Cmake/share/cmake-4.1/Modules/Platform/Windows-MSVC-CXX.cmake:6 (__windows_compiler_msvc)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeCXXInformation.cmake:48 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_RC_COMPILER"
     description: "RC compiler"
@@ -666,12 +666,12 @@ events:
     backtrace:
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/CMakeScratch/TryCompile-z40bep"
-      binary: "D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/CMakeScratch/TryCompile-z40bep"
+      source: "D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/CMakeScratch/TryCompile-1ho80q"
+      binary: "D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/CMakeScratch/TryCompile-1ho80q"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -681,40 +681,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/CMakeScratch/TryCompile-z40bep'
+        Change Dir: 'D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/CMakeScratch/TryCompile-1ho80q'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2a234.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6361d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         ╨Т╨╡╤А╤Б╨╕╤П MSBuild 17.11.9+a69bbaaf5 ╨┤╨╗╤П .NET Framework
-        ╨б╨▒╨╛╤А╨║╨░ ╨╜╨░╤З╨░╤В╨░ 17.10.2025 14:21:55.
+        ╨б╨▒╨╛╤А╨║╨░ ╨╜╨░╤З╨░╤В╨░ 17.10.2025 15:09:00.
         
-        ╨Я╤А╨╛╨╡╨║╤В "D:\\project\\WorkoutServer\\_intermidiate_64\\CMakeFiles\\CMakeScratch\\TryCompile-z40bep\\cmTC_2a234.vcxproj" ╨▓ ╤Г╨╖╨╗╨╡ 1 (╤Ж╨╡╨╗╨╡╨▓╤Л╨╡ ╨╛╨▒╤К╨╡╨║╤В╤Л ╨┐╨╛ ╤Г╨╝╨╛╨╗╤З╨░╨╜╨╕╤О).
+        ╨Я╤А╨╛╨╡╨║╤В "D:\\project\\WorkoutServer\\_intermidiate_64\\CMakeFiles\\CMakeScratch\\TryCompile-1ho80q\\cmTC_6361d.vcxproj" ╨▓ ╤Г╨╖╨╗╨╡ 1 (╤Ж╨╡╨╗╨╡╨▓╤Л╨╡ ╨╛╨▒╤К╨╡╨║╤В╤Л ╨┐╨╛ ╤Г╨╝╨╛╨╗╤З╨░╨╜╨╕╤О).
         PrepareForBuild:
-          ╨б╨╛╨╖╨┤╨░╨╜╨╕╨╡ ╨║╨░╤В╨░╨╗╨╛╨│╨░ "cmTC_2a234.dir\\Debug\\".
+          ╨б╨╛╨╖╨┤╨░╨╜╨╕╨╡ ╨║╨░╤В╨░╨╗╨╛╨│╨░ "cmTC_6361d.dir\\Debug\\".
           ╨б╤В╤А╤Г╨║╤В╤Г╤А╨╕╤А╨╛╨▓╨░╨╜╨╜╤Л╨╣ ╨▓╤Л╨▓╨╛╨┤ ╨▓╨║╨╗╤О╤З╨╡╨╜. ╨д╨╛╤А╨╝╨░╤В╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡ ╨┤╨╕╨░╨│╨╜╨╛╤Б╤В╨╕╨║╨╕ ╨║╨╛╨╝╨┐╨╕╨╗╤П╤В╨╛╤А╨░ ╨▒╤Г╨┤╨╡╤В ╨╛╤В╤А╨░╨╢╨░╤В╤М ╨╕╨╡╤А╨░╤А╤Е╨╕╤О ╨╛╤И╨╕╨▒╨╛╨║. ╨Я╨╛╨┤╤А╨╛╨▒╨╜╨╡╨╡ ╤Б╨╝. https://aka.ms/cpp/structured-output.
-          ╨б╨╛╨╖╨┤╨░╨╜╨╕╨╡ ╨║╨░╤В╨░╨╗╨╛╨│╨░ "D:\\project\\WorkoutServer\\_intermidiate_64\\CMakeFiles\\CMakeScratch\\TryCompile-z40bep\\Debug\\".
-          ╨б╨╛╨╖╨┤╨░╨╜╨╕╨╡ ╨║╨░╤В╨░╨╗╨╛╨│╨░ "cmTC_2a234.dir\\Debug\\cmTC_2a234.tlog\\".
+          ╨б╨╛╨╖╨┤╨░╨╜╨╕╨╡ ╨║╨░╤В╨░╨╗╨╛╨│╨░ "D:\\project\\WorkoutServer\\_intermidiate_64\\CMakeFiles\\CMakeScratch\\TryCompile-1ho80q\\Debug\\".
+          ╨б╨╛╨╖╨┤╨░╨╜╨╕╨╡ ╨║╨░╤В╨░╨╗╨╛╨│╨░ "cmTC_6361d.dir\\Debug\\cmTC_6361d.tlog\\".
         InitializeBuildStatus:
-          ╨б╨╛╨╖╨┤╨░╨╜╨╕╨╡ "cmTC_2a234.dir\\Debug\\cmTC_2a234.tlog\\unsuccessfulbuild", ╤В╨░╨║ ╨║╨░╨║ ╨▒╤Л╨╗╨╛ ╨╖╨░╨┤╨░╨╜╨╛ "AlwaysCreate".
-          ╨Ю╨▒╤А╨░╤Й╨╡╨╜╨╕╨╡ ╨║ "cmTC_2a234.dir\\Debug\\cmTC_2a234.tlog\\unsuccessfulbuild".
+          ╨б╨╛╨╖╨┤╨░╨╜╨╕╨╡ "cmTC_6361d.dir\\Debug\\cmTC_6361d.tlog\\unsuccessfulbuild", ╤В╨░╨║ ╨║╨░╨║ ╨▒╤Л╨╗╨╛ ╨╖╨░╨┤╨░╨╜╨╛ "AlwaysCreate".
+          ╨Ю╨▒╤А╨░╤Й╨╡╨╜╨╕╨╡ ╨║ "cmTC_6361d.dir\\Debug\\cmTC_6361d.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_2a234.dir\\Debug\\\\" /Fd"cmTC_2a234.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\Cmake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_6361d.dir\\Debug\\\\" /Fd"cmTC_6361d.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\Cmake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
           ╨Ю╨┐╤В╨╕╨╝╨╕╨╖╨╕╤А╤Г╤О╤Й╨╕╨╣ ╨║╨╛╨╝╨┐╨╕╨╗╤П╤В╨╛╤А Microsoft (R) C/C++ ╨▓╨╡╤А╤Б╨╕╨╕ 19.41.34123 ╨┤╨╗╤П x64
           (C) ╨Ъ╨╛╤А╨┐╨╛╤А╨░╤Ж╨╕╤П ╨Ь╨░╨╣╨║╤А╨╛╤Б╨╛╤Д╤В (Microsoft Corporation).  ╨Т╤Б╨╡ ╨┐╤А╨░╨▓╨░ ╨╖╨░╤Й╨╕╤Й╨╡╨╜╤Л.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_2a234.dir\\Debug\\\\" /Fd"cmTC_2a234.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\Cmake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_6361d.dir\\Debug\\\\" /Fd"cmTC_6361d.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\Cmake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\project\\WorkoutServer\\_intermidiate_64\\CMakeFiles\\CMakeScratch\\TryCompile-z40bep\\Debug\\cmTC_2a234.exe" /INCREMENTAL /ILK:"cmTC_2a234.dir\\Debug\\cmTC_2a234.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/CMakeScratch/TryCompile-z40bep/Debug/cmTC_2a234.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/CMakeScratch/TryCompile-z40bep/Debug/cmTC_2a234.lib" /MACHINE:X64  /machine:x64 cmTC_2a234.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_2a234.vcxproj -> D:\\project\\WorkoutServer\\_intermidiate_64\\CMakeFiles\\CMakeScratch\\TryCompile-z40bep\\Debug\\cmTC_2a234.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\project\\WorkoutServer\\_intermidiate_64\\CMakeFiles\\CMakeScratch\\TryCompile-1ho80q\\Debug\\cmTC_6361d.exe" /INCREMENTAL /ILK:"cmTC_6361d.dir\\Debug\\cmTC_6361d.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/CMakeScratch/TryCompile-1ho80q/Debug/cmTC_6361d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/CMakeScratch/TryCompile-1ho80q/Debug/cmTC_6361d.lib" /MACHINE:X64  /machine:x64 cmTC_6361d.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_6361d.vcxproj -> D:\\project\\WorkoutServer\\_intermidiate_64\\CMakeFiles\\CMakeScratch\\TryCompile-1ho80q\\Debug\\cmTC_6361d.exe
         FinalizeBuildStatus:
-          ╨д╨░╨╣╨╗ "cmTC_2a234.dir\\Debug\\cmTC_2a234.tlog\\unsuccessfulbuild" ╤Г╨┤╨░╨╗╤П╨╡╤В╤Б╤П.
-          ╨Ю╨▒╤А╨░╤Й╨╡╨╜╨╕╨╡ ╨║ "cmTC_2a234.dir\\Debug\\cmTC_2a234.tlog\\cmTC_2a234.lastbuildstate".
-        ╨б╨▒╨╛╤А╨║╨░ ╨┐╤А╨╛╨╡╨║╤В╨░ "D:\\project\\WorkoutServer\\_intermidiate_64\\CMakeFiles\\CMakeScratch\\TryCompile-z40bep\\cmTC_2a234.vcxproj" ╨╖╨░╨▓╨╡╤А╤И╨╡╨╜╨░ (╤Ж╨╡╨╗╨╡╨▓╤Л╨╡ ╨╛╨▒╤К╨╡╨║╤В╤Л ╨┐╨╛ ╤Г╨╝╨╛╨╗╤З╨░╨╜╨╕╤О).
+          ╨д╨░╨╣╨╗ "cmTC_6361d.dir\\Debug\\cmTC_6361d.tlog\\unsuccessfulbuild" ╤Г╨┤╨░╨╗╤П╨╡╤В╤Б╤П.
+          ╨Ю╨▒╤А╨░╤Й╨╡╨╜╨╕╨╡ ╨║ "cmTC_6361d.dir\\Debug\\cmTC_6361d.tlog\\cmTC_6361d.lastbuildstate".
+        ╨б╨▒╨╛╤А╨║╨░ ╨┐╤А╨╛╨╡╨║╤В╨░ "D:\\project\\WorkoutServer\\_intermidiate_64\\CMakeFiles\\CMakeScratch\\TryCompile-1ho80q\\cmTC_6361d.vcxproj" ╨╖╨░╨▓╨╡╤А╤И╨╡╨╜╨░ (╤Ж╨╡╨╗╨╡╨▓╤Л╨╡ ╨╛╨▒╤К╨╡╨║╤В╤Л ╨┐╨╛ ╤Г╨╝╨╛╨╗╤З╨░╨╜╨╕╤О).
         
         ╨б╨▒╨╛╤А╨║╨░ ╤Г╤Б╨┐╨╡╤И╨╜╨╛ ╨╖╨░╨▓╨╡╤А╤И╨╡╨╜╨░.
             ╨Я╤А╨╡╨┤╤Г╨┐╤А╨╡╨╢╨┤╨╡╨╜╨╕╨╣: 0
             ╨Ю╤И╨╕╨▒╨╛╨║: 0
         
-        ╨Я╤А╨╛╤И╨╗╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╕ 00:00:00.66
+        ╨Я╤А╨╛╤И╨╗╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╕ 00:00:00.56
         
       exitCode: 0
   -
@@ -722,7 +722,7 @@ events:
     backtrace:
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
@@ -740,7 +740,7 @@ events:
       - "D:/Cmake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "D:/Cmake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.41.34123.0
