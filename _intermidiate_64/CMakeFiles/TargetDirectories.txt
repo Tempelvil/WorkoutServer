@@ -1,0 +1,3 @@
+D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/WorkoutServer.dir
+D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/ALL_BUILD.dir
+D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4AB02110-D815-32B3-BEC8-9FF899B9211D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>WorkoutServer</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\project\WorkoutServer\_intermidiate_64\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WorkoutServer.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WorkoutServer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\project\WorkoutServer\_intermidiate_64\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WorkoutServer.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WorkoutServer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\project\WorkoutServer\_intermidiate_64\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">WorkoutServer.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">WorkoutServer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\project\WorkoutServer\_intermidiate_64\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">WorkoutServer.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">WorkoutServer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/project/WorkoutServer/_intermidiate_64/Debug/WorkoutServer.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/project/WorkoutServer/_intermidiate_64/Debug/WorkoutServer.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/project/WorkoutServer/_intermidiate_64/Release/WorkoutServer.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/project/WorkoutServer/_intermidiate_64/Release/WorkoutServer.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/project/WorkoutServer/_intermidiate_64/MinSizeRel/WorkoutServer.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/project/WorkoutServer/_intermidiate_64/MinSizeRel/WorkoutServer.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/project/WorkoutServer/_intermidiate_64/RelWithDebInfo/WorkoutServer.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/project/WorkoutServer/_intermidiate_64/RelWithDebInfo/WorkoutServer.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\project\WorkoutServer\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/project/WorkoutServer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Cmake\bin\cmake.exe -SD:/project/WorkoutServer -BD:/project/WorkoutServer/_intermidiate_64 --check-stamp-file D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Cmake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;D:\Cmake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Cmake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Linker\MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\4.1.1\CMakeCXXCompiler.cmake;D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\4.1.1\CMakeRCCompiler.cmake;D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\4.1.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/project/WorkoutServer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Cmake\bin\cmake.exe -SD:/project/WorkoutServer -BD:/project/WorkoutServer/_intermidiate_64 --check-stamp-file D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Cmake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;D:\Cmake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Cmake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Linker\MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\4.1.1\CMakeCXXCompiler.cmake;D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\4.1.1\CMakeRCCompiler.cmake;D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\4.1.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/project/WorkoutServer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Cmake\bin\cmake.exe -SD:/project/WorkoutServer -BD:/project/WorkoutServer/_intermidiate_64 --check-stamp-file D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Cmake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;D:\Cmake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Cmake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Linker\MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\4.1.1\CMakeCXXCompiler.cmake;D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\4.1.1\CMakeRCCompiler.cmake;D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\4.1.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/project/WorkoutServer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Cmake\bin\cmake.exe -SD:/project/WorkoutServer -BD:/project/WorkoutServer/_intermidiate_64 --check-stamp-file D:/project/WorkoutServer/_intermidiate_64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Cmake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;D:\Cmake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Cmake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Cmake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Linker\MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\Windows.cmake;D:\Cmake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\4.1.1\CMakeCXXCompiler.cmake;D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\4.1.1\CMakeRCCompiler.cmake;D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\4.1.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\project\WorkoutServer\src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\project\WorkoutServer\_intermidiate_64\ZERO_CHECK.vcxproj">
+      <Project>{AEEEBAE5-1AEA-3035-AAF9-49204860D7B7}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

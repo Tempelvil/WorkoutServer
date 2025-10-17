@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\project\WorkoutServer\_intermidiate_64\CMakeFiles\e991442661b448c312cdb22502739ea4\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{CCF3661F-145D-31A9-A451-D6BEB88FBC89}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
