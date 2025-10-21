@@ -1,0 +1,287 @@
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe
+The following packages are already installed:
+  * brotli:x64-windows@1.1.0#1
+  * c-ares:x64-windows@1.34.5#1
+    drogon:x64-windows@1.9.11
+  * jsoncpp:x64-windows@1.9.6
+  * openssl:x64-windows@3.6.0#2
+    sqlite3[core,json1]:x64-windows@3.50.4
+  * trantor:x64-windows@1.5.24
+  * vcpkg-cmake:x64-windows@2024-04-23
+  * vcpkg-cmake-config:x64-windows@2024-05-23
+  * vcpkg-cmake-get-vars:x64-windows@2025-05-29
+  * zlib:x64-windows@1.3.1
+The package drogon provides CMake targets:
+
+    find_package(Drogon CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE Drogon::Drogon)
+
+sqlite3 provides pkgconfig bindings.
+sqlite3 provides CMake targets:
+
+    find_package(unofficial-sqlite3 CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE unofficial::sqlite3::sqlite3)
+
+All requested installations completed successfully in: 548 us
+-- Running vcpkg install - done
+-- Selecting Windows SDK version 10.0.22621.0 to target Windows 10.0.19045.
+-- Found OpenSSL: optimized;D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/lib/libcrypto.lib;debug;D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/debug/lib/libcrypto.lib (found version "3.6.0")
+-- Found ZLIB: optimized;D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/lib/zlib.lib;debug;D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/debug/lib/zlibd.lib (found version "1.3.1")
+-- Configuring done (5.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: D:/project/WorkoutServer/_intermidiate_64
+-- Cache values
+// Path to a library.
+BROTLICOMMON_LIBRARY:FILEPATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/debug/lib/brotlicommon.lib
+
+// Path to a library.
+BROTLIDEC_LIBRARY:FILEPATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/debug/lib/brotlidec.lib
+
+// Path to a library.
+BROTLIENC_LIBRARY:FILEPATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/debug/lib/brotlienc.lib
+
+// Path to a file.
+BROTLI_INCLUDE_DIR:PATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/include
+
+// Path to a program.
+CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/lib.exe
+
+// Semicolon separated list of supported configuration types, only supports Debug, Release, MinSizeRel, and RelWithDebInfo, anything else will be ignored.
+CMAKE_CONFIGURATION_TYPES:STRING=Debug;Release;MinSizeRel;RelWithDebInfo
+
+// Flags used by the CXX compiler during all build types.
+CMAKE_CXX_FLAGS:STRING=/DWIN32 /D_WINDOWS /EHsc
+
+// Flags used by the CXX compiler during DEBUG builds.
+CMAKE_CXX_FLAGS_DEBUG:STRING=/Zi /Ob0 /Od /RTC1
+
+// Flags used by the CXX compiler during MINSIZEREL builds.
+CMAKE_CXX_FLAGS_MINSIZEREL:STRING=/O1 /Ob1 /DNDEBUG
+
+// Flags used by the CXX compiler during RELEASE builds.
+CMAKE_CXX_FLAGS_RELEASE:STRING=/O2 /Ob2 /DNDEBUG
+
+// Flags used by the CXX compiler during RELWITHDEBINFO builds.
+CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=/Zi /O2 /Ob1 /DNDEBUG
+
+// Libraries linked by default with all C++ applications.
+CMAKE_CXX_STANDARD_LIBRARIES:STRING=kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+
+// Flags used by the linker during all build types.
+CMAKE_EXE_LINKER_FLAGS:STRING=/machine:x64
+
+// Flags used by the linker during DEBUG builds.
+CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=/debug /INCREMENTAL
+
+// Flags used by the linker during MINSIZEREL builds.
+CMAKE_EXE_LINKER_FLAGS_MINSIZEREL:STRING=/INCREMENTAL:NO
+
+// Flags used by the linker during RELEASE builds.
+CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
+
+// Flags used by the linker during RELWITHDEBINFO builds.
+CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
+
+// Install path prefix, prepended onto install directories.
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/ServerWorkout
+
+// Path to a program.
+CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/link.exe
+
+// Flags used by the linker during the creation of modules during all build types.
+CMAKE_MODULE_LINKER_FLAGS:STRING=/machine:x64
+
+// Flags used by the linker during the creation of modules during DEBUG builds.
+CMAKE_MODULE_LINKER_FLAGS_DEBUG:STRING=/debug /INCREMENTAL
+
+// Flags used by the linker during the creation of modules during MINSIZEREL builds.
+CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL:STRING=/INCREMENTAL:NO
+
+// Flags used by the linker during the creation of modules during RELEASE builds.
+CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
+
+// Flags used by the linker during the creation of modules during RELWITHDEBINFO builds.
+CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
+
+// Path to a program.
+CMAKE_MT:FILEPATH=C:/Program Files (x86)/Windows Kits/10/bin/10.0.22621.0/x64/mt.exe
+
+// RC compiler
+CMAKE_RC_COMPILER:FILEPATH=rc
+
+// Flags for Windows Resource Compiler during all build types.
+CMAKE_RC_FLAGS:STRING=-DWIN32
+
+// Flags for Windows Resource Compiler during DEBUG builds.
+CMAKE_RC_FLAGS_DEBUG:STRING=-D_DEBUG
+
+// Flags for Windows Resource Compiler during MINSIZEREL builds.
+CMAKE_RC_FLAGS_MINSIZEREL:STRING=
+
+// Flags for Windows Resource Compiler during RELEASE builds.
+CMAKE_RC_FLAGS_RELEASE:STRING=
+
+// Flags for Windows Resource Compiler during RELWITHDEBINFO builds.
+CMAKE_RC_FLAGS_RELWITHDEBINFO:STRING=
+
+// Flags used by the linker during the creation of shared libraries during all build types.
+CMAKE_SHARED_LINKER_FLAGS:STRING=/machine:x64
+
+// Flags used by the linker during the creation of shared libraries during DEBUG builds.
+CMAKE_SHARED_LINKER_FLAGS_DEBUG:STRING=/debug /INCREMENTAL
+
+// Flags used by the linker during the creation of shared libraries during MINSIZEREL builds.
+CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL:STRING=/INCREMENTAL:NO
+
+// Flags used by the linker during the creation of shared libraries during RELEASE builds.
+CMAKE_SHARED_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
+
+// Flags used by the linker during the creation of shared libraries during RELWITHDEBINFO builds.
+CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
+
+// If set, runtime paths are not added when installing shared libraries, but are added when building.
+CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
+
+// If set, runtime paths are not added when using shared libraries.
+CMAKE_SKIP_RPATH:BOOL=NO
+
+// Flags used by the archiver during the creation of static libraries during all build types.
+CMAKE_STATIC_LINKER_FLAGS:STRING=/machine:x64
+
+// Flags used by the archiver during the creation of static libraries during DEBUG builds.
+CMAKE_STATIC_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the archiver during the creation of static libraries during MINSIZEREL builds.
+CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the archiver during the creation of static libraries during RELEASE builds.
+CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used by the archiver during the creation of static libraries during RELWITHDEBINFO builds.
+CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// If this value is on, makefiles will be generated without the .SILENT directive, and all commands will be echoed to the console during the make.  This is useful for debugging only. With Visual Studio IDE projects all commands are done without /nologo.
+CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+// TRUE if we have the C++ filesystem headers
+CXX_FILESYSTEM_HAVE_FS:BOOL=TRUE
+
+// The header that should be included to obtain the filesystem APIs
+CXX_FILESYSTEM_HEADER:STRING=filesystem
+
+// TRUE if the C++ filesystem library is the experimental version
+CXX_FILESYSTEM_IS_EXPERIMENTAL:BOOL=FALSE
+
+// The C++ namespace that contains the filesystem APIs
+CXX_FILESYSTEM_NAMESPACE:STRING=std::filesystem
+
+// The directory containing a CMake configuration file for Drogon.
+Drogon_DIR:PATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/share/drogon
+
+// TRUE if we can run a program using std::filesystem
+Filesystem_FOUND:BOOL=TRUE
+
+// jsoncpp include dir
+JSONCPP_INCLUDE_DIRS:PATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/include
+
+// jsoncpp library
+JSONCPP_LIBRARIES:FILEPATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/debug/lib/jsoncpp.lib
+
+// Path to a library.
+LIB_EAY_DEBUG:FILEPATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/debug/lib/libcrypto.lib
+
+// Path to a library.
+LIB_EAY_RELEASE:FILEPATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/lib/libcrypto.lib
+
+// Path to a file.
+OPENSSL_APPLINK_SOURCE:FILEPATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/include/openssl/applink.c
+
+// Path to a file.
+OPENSSL_INCLUDE_DIR:PATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/include
+
+// Path to a library.
+SSL_EAY_DEBUG:FILEPATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/debug/lib/libssl.lib
+
+// Path to a library.
+SSL_EAY_RELEASE:FILEPATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/lib/libssl.lib
+
+// The directory containing a CMake configuration file for Trantor.
+Trantor_DIR:PATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/share/trantor
+
+// Automatically copy dependencies into the output directory for executables.
+VCPKG_APPLOCAL_DEPS:BOOL=ON
+
+// Additional options to bootstrap vcpkg
+VCPKG_BOOTSTRAP_OPTIONS:STRING=
+
+// The directory which contains the installed libraries for each triplet
+VCPKG_INSTALLED_DIR:PATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed
+
+// Additional install options to pass to vcpkg
+VCPKG_INSTALL_OPTIONS:STRING=
+
+// The path to the vcpkg manifest directory.
+VCPKG_MANIFEST_DIR:PATH=D:/project/WorkoutServer
+
+// Install the dependencies listed in your manifest:
+    If this is off, you will have to manually install your dependencies.
+    See https://github.com/microsoft/vcpkg/tree/master/docs/specifications/manifests.md for more info.
+
+VCPKG_MANIFEST_INSTALL:BOOL=ON
+
+// Use manifest mode, as opposed to classic mode.
+VCPKG_MANIFEST_MODE:BOOL=ON
+
+// Overlay ports to use for vcpkg install in manifest mode
+VCPKG_OVERLAY_PORTS:STRING=
+
+// Overlay triplets to use for vcpkg install in manifest mode
+VCPKG_OVERLAY_TRIPLETS:STRING=
+
+// Appends the vcpkg paths to CMAKE_PREFIX_PATH, CMAKE_LIBRARY_PATH and CMAKE_FIND_ROOT_PATH so that vcpkg libraries/packages are found after toolchain/system libraries/packages.
+VCPKG_PREFER_SYSTEM_LIBS:BOOL=OFF
+
+// Enable the setup of CMAKE_PROGRAM_PATH to vcpkg paths
+VCPKG_SETUP_CMAKE_PROGRAM_PATH:BOOL=ON
+
+// Vcpkg target triplet (ex. x86-windows)
+VCPKG_TARGET_TRIPLET:STRING=x64-windows
+
+// Trace calls to find_package()
+VCPKG_TRACE_FIND_PACKAGE:BOOL=OFF
+
+// Enables messages from the VCPKG toolchain for debugging purposes.
+VCPKG_VERBOSE:BOOL=OFF
+
+// (experimental) Automatically copy dependencies into the install target directory for executables. Requires CMake 3.14.
+X_VCPKG_APPLOCAL_DEPS_INSTALL:BOOL=OFF
+
+// (experimental) Add USES_TERMINAL to VCPKG_APPLOCAL_DEPS to force serialization.
+X_VCPKG_APPLOCAL_DEPS_SERIALIZED:BOOL=OFF
+
+// Path to a file.
+ZLIB_INCLUDE_DIR:PATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/include
+
+// Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/debug/lib/zlibd.lib
+
+// Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/lib/zlib.lib
+
+// Path to a program.
+Z_VCPKG_BUILTIN_POWERSHELL_PATH:FILEPATH=C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe
+
+// Path to a program.
+Z_VCPKG_PWSH_PATH:FILEPATH=Z_VCPKG_PWSH_PATH-NOTFOUND
+
+// The directory which contains the installed libraries for each triplet
+_VCPKG_INSTALLED_DIR:PATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed
+
+// The directory containing a CMake configuration file for c-ares.
+c-ares_DIR:PATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/share/c-ares
+
+// The directory containing a CMake configuration file for unofficial-sqlite3.
+unofficial-sqlite3_DIR:PATH=D:/project/WorkoutServer/_intermidiate_64/vcpkg_installed/x64-windows/share/unofficial-sqlite3
+

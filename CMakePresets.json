@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "use-vcpkg",
+      "description": "Use vcpkg toolchain; also add installed share to CMAKE_PREFIX_PATH",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/_intermidiate_64",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-windows",
+        "CMAKE_PREFIX_PATH": "${sourceDir}/_intermidiate_64/vcpkg_installed/x64-windows/share"
+      }
+    }
+  ]
+}
