@@ -371,6 +371,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D:\project\WorkoutServer\src\main.cpp" />
+    <ClCompile Include="D:\project\WorkoutServer\src\Db.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\project\WorkoutServer\_intermidiate_64\ZERO_CHECK.vcxproj">

@@ -4,6 +4,9 @@
     <ClCompile Include="D:\project\WorkoutServer\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\project\WorkoutServer\src\Db.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\project\WorkoutServer\CMakeLists.txt" />

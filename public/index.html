@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workout Server</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 30px;
+        }
+
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        pre {
+            background: #f0f0f0;
+            padding: 10px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Workout Server</h1>
+
+    <button onclick="addWorkout()">Add Workout</button>
+    <button onclick="listWorkouts()">List Workouts</button>
+    <button onclick="addExercise()">Add Exercise</button>
+    <button onclick="listExercises()">List Exercises</button>
+
+    <h3>Result:</h3>
+    <pre id="output"></pre>
+
+    <script>
+    async function addWorkout() {
+      const name = prompt("Workout name:");
+      const date = prompt("Date (YYYY-MM-DD):");
+      const resp = await fetch("/api/workouts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, date })
+      });
+      document.getElementById("output").textContent = await resp.text();
+    }
+
+    async function listWorkouts() {
+      const resp = await fetch("/api/workouts");
+      const data = await resp.json();
+      document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+    }
+
+    async function addExercise() {
+      const name = prompt("Exercise name:");
+      const resp = await fetch("/api/exercises", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name })
+      });
+      document.getElementById("output").textContent = await resp.text();
+    }
+
+    async function listExercises() {
+      const resp = await fetch("/api/exercises");
+      const data = await resp.json();
+      document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+    }
+    </script>
+</body>
+</html>
