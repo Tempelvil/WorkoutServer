@@ -91,7 +91,7 @@ void getExercisesHandler(const HttpRequestPtr& req,
     callback(res);
 }
 void addExercisesHandler(const HttpRequestPtr& req,
-    std::function<void(const const HttpResponsePtr&)>&& callback) {
+    std::function<void( const HttpResponsePtr&)>&& callback) {
     auto json = req->getJsonObject();
     if (!json || !json->isMember("name")) {
         Json::Value err;
@@ -114,6 +114,72 @@ void addExercisesHandler(const HttpRequestPtr& req,
     if (!ok) { res->setStatusCode(k500InternalServerError); }
     callback(res);
 
+}
+
+
+void listSetsHandler(const HttpRequestPtr& req,
+    std::function<void(const HttpResponsePtr&)>&& callback) {
+    (void)req;
+    std::vector<Sets> rows;
+    {
+        std::lock_guard<std::mutex>lock(g_db_mutex);
+        rows = selectSetsJoined(g_db);
+    }
+    Json::Value arr(Json::arrayValue);
+    for (const auto& s : rows) {
+        Json::Value j;
+        j["id"] = s.id;
+        j["workout_id"] = s.workout_id;
+        j["exercise_id"] = s.exercise_id;
+        j["exercise_name"] = s.exercise_name;
+        j["repetitions"] = s.repetitions;
+        j["aproaches"] = s.aproaches;
+        j["weight"] = s.weight;
+        arr.append(j);
+    }
+    auto res = HttpResponse::newHttpJsonResponse(arr);
+    callback(res);
+}
+
+void addSetHandler(const HttpRequestPtr& req,
+std::function<void (const HttpResponsePtr&) > && callback){
+    auto json = req->getJsonObject();
+    if (!json || !json->isMember("workout_id") || !json->isMember("exercise_id") || !json->isMember("weight") 
+        || !json->isMember("repetitions") || !json->isMember("aproaches"))
+    {
+        Json::Value err;
+        err["status"] = "error";
+        err["message"] = "workout_id, exercise_id, weight, repetitions, aproaches required";
+
+        auto res = HttpResponse::newHttpJsonResponse(err);
+        res->setStatusCode(k400BadRequest);
+        callback(res);
+        return;
+    }
+    int workout_id = (*json)["workout_id"].asInt();
+    int exercise_id = (*json)["exercise_id"].asInt();
+    double weight = (*json)["weight"].asDouble();
+    int repetitions = (*json)["repetitions"].asInt();
+    int aproaches = (*json)["aproaches"].asInt();
+
+    bool ok;
+    {
+        std::lock_guard<std::mutex> ld(g_db_mutex);
+        ok = addSet(g_db, workout_id, exercise_id, weight, repetitions, aproaches);
+    }
+
+    Json::Value ans;
+    if (!ok) {
+        ans["status"] = "error";
+        ans["message"] = "db error";
+        auto res = HttpResponse::newHttpJsonResponse(ans);
+        res->setStatusCode(k500InternalServerError);
+        callback(res);
+        return;
+    }
+    ans["status"] = "ok";
+    auto res = HttpResponse::newHttpJsonResponse(ans);
+    callback(res);
 }
 
 void healthHandler(const HttpRequestPtr& req,
@@ -155,6 +221,10 @@ int main()
     // Exercises
     app().registerHandler("/api/exercises", &getExercisesHandler, { Get });
     app().registerHandler("/api/exercises", &addExercisesHandler, { Post });
+
+    app().registerHandler("/api/sets", &listSetsHandler, { Get });
+    app().registerHandler("/api/sets", &addSetHandler, {Post});
+
     app().registerHandler("/health", &healthHandler, { Get });
 
     // Запуск

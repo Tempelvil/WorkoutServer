@@ -21,6 +21,33 @@
             padding: 10px;
             white-space: pre-wrap;
         }
+
+        .box {
+            border: 1px solid #ddd;
+            padding: 12px;
+            border-radius: 8px;
+            max-width: 520px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 8px 0;
+        }
+
+        label {
+            width: 130px;
+        }
+
+        input, select {
+            padding: 6px;
+            font: inherit;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -30,43 +57,169 @@
     <button onclick="listWorkouts()">List Workouts</button>
     <button onclick="addExercise()">Add Exercise</button>
     <button onclick="listExercises()">List Exercises</button>
+    <button onclick="openAddSet()">Add Set</button>
+    <button onclick="listSets()">List Sets</button>
+
+    <div id="addSetBox" class="box hidden">
+        <h3>Add Set</h3>
+
+        <div class="row">
+            <label for="selWorkout">Workout:</label>
+            <select id="selWorkout"></select>
+        </div>
+
+        <div class="row">
+            <label for="selExercise">Exercise:</label>
+            <select id="selExercise"></select>
+        </div>
+
+        <div class="row">
+            <label for="sWeight">Weight (kg):</label>
+            <input id="sWeight" type="number" step="0.1" placeholder="60.0" />
+        </div>
+
+        <div class="row">
+            <label for="sReps">Repetitions:</label>
+            <input id="sReps" type="number" placeholder="12" />
+        </div>
+
+        <div class="row">
+            <label for="sAproaches">Aproaches:</label>
+            <input id="sAproaches" type="number" placeholder="3" />
+        </div>
+
+        <div class="row">
+            <button onclick="submitSet()">Submit Set</button>
+            <button onclick="closeAddSet()">Cancel</button>
+        </div>
+    </div>
 
     <h3>Result:</h3>
     <pre id="output"></pre>
 
     <script>
-    async function addWorkout() {
-      const name = prompt("Workout name:");
-      const date = prompt("Date (YYYY-MM-DD):");
-      const resp = await fetch("/api/workouts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, date })
-      });
-      document.getElementById("output").textContent = await resp.text();
-    }
+        const out = document.getElementById("output");
+        function show(data) {
+            out.textContent = (typeof data === "string") ? data : JSON.stringify(data, null, 2);
+        }
 
-    async function listWorkouts() {
-      const resp = await fetch("/api/workouts");
-      const data = await resp.json();
-      document.getElementById("output").textContent = JSON.stringify(data, null, 2);
-    }
+        async function getJSON(url) {
+            const r = await fetch(url);
+            if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+            return await r.json();
+        }
 
-    async function addExercise() {
-      const name = prompt("Exercise name:");
-      const resp = await fetch("/api/exercises", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name })
-      });
-      document.getElementById("output").textContent = await resp.text();
-    }
+        async function postJSON(url, body) {
+            const r = await fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(body)
+            });
+            const txt = await r.text();
+            try { return JSON.parse(txt); } catch { return { raw: txt, status: r.status }; }
+        }
 
-    async function listExercises() {
-      const resp = await fetch("/api/exercises");
-      const data = await resp.json();
-      document.getElementById("output").textContent = JSON.stringify(data, null, 2);
-    }
+        async function addWorkout() {
+            const name = prompt("Workout name:");
+            const date = prompt("Date (YYYY-MM-DD):");
+            if (!name || !date) { show("Name and Date required"); return; }
+            const resp = await postJSON("/api/workouts", { name, date });
+            show(resp);
+        }
+        async function listWorkouts() {
+            const data = await getJSON("/api/workouts");
+            show(data);
+        }
+
+        async function addExercise() {
+            const name = prompt("Exercise name:");
+            if (!name) { show("Name is required"); return; }
+            const resp = await postJSON("/api/exercises", { name });
+            show(resp);
+        }
+        async function listExercises() {
+            const data = await getJSON("/api/exercises");
+            show(data);
+        }
+
+        const addSetBox = document.getElementById("addSetBox");
+        const selWorkout = document.getElementById("selWorkout");
+        const selExercise = document.getElementById("selExercise");
+
+        async function openAddSet() {
+            try {
+                const [workouts, exercises] = await Promise.all([
+                    getJSON("/api/workouts"),
+                    getJSON("/api/exercises")
+                ]);
+
+                selWorkout.innerHTML = "";
+                workouts.forEach(w => {
+                    const opt = document.createElement("option");
+                    opt.value = w.id;
+                    opt.textContent = `${w.name} (${w.date})`;
+                    selWorkout.appendChild(opt);
+                });
+
+                selExercise.innerHTML = "";
+                exercises.forEach(e => {
+                    const opt = document.createElement("option");
+                    opt.value = e.id;
+                    opt.textContent = e.name;
+                    selExercise.appendChild(opt);
+                });
+
+                addSetBox.classList.remove("hidden");
+                show("Fill the fields and press 'Submit Set'");
+            } catch (e) {
+                show("Failed to load lists: " + e.message);
+            }
+        }
+
+        function closeAddSet() {
+            addSetBox.classList.add("hidden");
+        }
+
+        async function submitSet() {
+            const workout_id = parseInt(selWorkout.value, 10);
+            const exercise_id = parseInt(selExercise.value, 10);
+            const weight = parseFloat(document.getElementById("sWeight").value);
+            const repetitions = parseInt(document.getElementById("sReps").value, 10);
+            const aproaches = parseInt(document.getElementById("sAproaches").value, 10);
+
+            if (!Number.isFinite(workout_id) || !Number.isFinite(exercise_id)) {
+                show("Pick workout and exercise");
+                return;
+            }
+            if (!Number.isFinite(weight) || !Number.isFinite(repetitions) || !Number.isFinite(aproaches)) {
+                show("Enter valid numbers for weight/repetitions/aproaches");
+                return;
+            }
+
+            const resp = await postJSON("/api/sets", {
+                workout_id, exercise_id, weight, repetitions, aproaches
+            });
+            show(resp);
+        }
+
+        async function listSets() {
+            const data = await getJSON("/api/sets");
+            if (!Array.isArray(data) || data.leght == 0) {
+                show("No sets yet");
+                return;
+            }
+            const lines = data.map(s => {
+                const exName = s.exercise_name || "(no name)";
+                const reps = s.repetitions ?? "?";
+                const apro = s.aproaches ?? "?";
+                const w = s.weight ?? "?";
+
+                return `#${s.id}: ${exName} — ${reps} x ${apro}, ${w} kg (workout_id=${s.workout_id}, exercise_id=${s.exercise_id})`;
+            });
+            show(lines.join("\n"));
+
+        }
+
     </script>
 </body>
 </html>
