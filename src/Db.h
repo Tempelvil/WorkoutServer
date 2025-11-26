@@ -34,3 +34,7 @@ std::vector<Exercise> selectExercises(sqlite3* db);
 
 bool addSet(sqlite3* db, int workout_id, int exercise_id, double weight, int repetitions, int aproaches);
 std::vector<Sets> selectSetsJoined(sqlite3* db);
+
+bool deleteWorkout(sqlite3* db, int workout_id);
+bool deleteExercise(sqlite3* db, int exercies_id);
+bool deleteSets(sqlite3* db, int sets_id);

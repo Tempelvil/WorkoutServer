@@ -182,6 +182,147 @@ std::function<void (const HttpResponsePtr&) > && callback){
     callback(res);
 }
 
+void deleteWorkoutHandler(const HttpRequestPtr& req,
+    std::function<void(const HttpResponsePtr&)>&& callback) {
+
+    Json::Value j;
+    auto Idstr = req->getParameter("id");
+    if (Idstr.empty()) {
+        j["status"] = "error";
+        j["message"] = "id required";
+        auto res = HttpResponse::newHttpJsonResponse(j);
+        res->setStatusCode(k400BadRequest);
+        callback(res);
+        return;
+    }
+
+    int id{};
+    try {
+        id = std::stoi(Idstr);
+    } catch(...){
+        j["status"] = "error";
+        j["message"] = "indvalid ID";
+        auto res = HttpResponse::newHttpJsonResponse(j);
+        res->setStatusCode(k400BadRequest);
+        callback(res);
+        return;
+    }
+    
+    bool ok;
+    {
+        std::lock_guard<std::mutex> lg(g_db_mutex);
+        ok = deleteWorkout(g_db, id);
+    }
+
+    if (!ok) {
+        j["status"] = "error";
+        j["message"] = "db error";
+        auto res = HttpResponse::newHttpJsonResponse(j);
+        res->setStatusCode(k500InternalServerError);
+        callback(res);
+        return;
+    }
+
+    j["status"] = "ok";
+    auto res = HttpResponse::newHttpJsonResponse(j);
+    callback(res);
+
+}
+
+void deleteExerciseHandler(const HttpRequestPtr& req,
+    std::function<void(const HttpResponsePtr&)>&& callback) {
+
+    Json::Value j;
+    auto Idstr = req->getParameter("id");
+    if (Idstr.empty()) {
+        j["status"] = "error";
+        j["message"] = "id required";
+        auto res = HttpResponse::newHttpJsonResponse(j);
+        res->setStatusCode(k400BadRequest);
+        callback(res);
+        return;
+    }
+
+    int id{};
+    try {
+        id = std::stoi(Idstr);
+    }
+    catch (...) {
+        j["status"] = "error";
+        j["message"] = "indvalid ID";
+        auto res = HttpResponse::newHttpJsonResponse(j);
+        res->setStatusCode(k400BadRequest);
+        callback(res);
+        return;
+    }
+
+    bool ok;
+    {
+        std::lock_guard<std::mutex> lg(g_db_mutex);
+        ok = deleteExercise(g_db, id);
+    }
+
+    if (!ok) {
+        j["status"] = "error";
+        j["message"] = "db error";
+        auto res = HttpResponse::newHttpJsonResponse(j);
+        res->setStatusCode(k500InternalServerError);
+        callback(res);
+        return;
+    }
+
+    j["status"] = "ok";
+    auto res = HttpResponse::newHttpJsonResponse(j);
+    callback(res);
+
+}
+
+void deleteSetHandler(const HttpRequestPtr& req,
+    std::function<void(const HttpResponsePtr&)>&& callback)
+{
+    Json::Value res;
+
+    auto IdStr = req->getParameter("id");
+    if (IdStr.empty()) {
+        res["status"] = "error";
+        res["message"] = "id required";
+        auto r = HttpResponse::newHttpJsonResponse(res);
+        r->setStatusCode(k400BadRequest);
+        callback(r);
+        return;
+    }
+
+    int id{};
+    try { id = std::stoi(IdStr); }
+    catch (...) {
+        res["status"] = "error";
+        res["message"] = "invalid id";
+        auto r = HttpResponse::newHttpJsonResponse(res);
+        r->setStatusCode(k400BadRequest);
+        callback(r);
+        return;
+    }
+
+    bool ok;
+    {
+        std::lock_guard<std::mutex> lk(g_db_mutex);
+        ok = deleteSets(g_db, id);
+    }
+
+    if (!ok) {
+        res["status"] = "error";
+        res["message"] = "db error";
+        auto r = HttpResponse::newHttpJsonResponse(res);
+        r->setStatusCode(k500InternalServerError);
+        callback(r);
+        return;
+    }
+
+    res["status"] = "ok";
+    auto r = HttpResponse::newHttpJsonResponse(res);
+    callback(r);
+}
+
 void healthHandler(const HttpRequestPtr& req,
     std::function<void(const HttpResponsePtr&)>&& callback)
 {
@@ -209,25 +350,22 @@ int main()
         sqlite3_close(db);
         return 1;
     }
-
-    // Статика (папка для index.html и т.д.)
     app().setDocumentRoot("D:/project/WorkoutServer/public");
 
-    // Роуты
-    // Workouts
     app().registerHandler("/api/workouts", &getWorkoutHandler, { Get });
     app().registerHandler("/api/workouts", &addWorkoutHandler, { Post });
+    app().registerHandler("/api/workouts", &deleteWorkoutHandler, { Delete });
 
-    // Exercises
     app().registerHandler("/api/exercises", &getExercisesHandler, { Get });
     app().registerHandler("/api/exercises", &addExercisesHandler, { Post });
+    app().registerHandler("/api/exercises", &deleteExerciseHandler, { Delete });
 
     app().registerHandler("/api/sets", &listSetsHandler, { Get });
     app().registerHandler("/api/sets", &addSetHandler, {Post});
+    app().registerHandler("/api/sets", &deleteSetHandler, { Delete });
 
     app().registerHandler("/health", &healthHandler, { Get });
 
-    // Запуск
     app().addListener("0.0.0.0", 8080);
     std::cout << "Starting server on 0.0.0.0:8080\n";
     app().run();

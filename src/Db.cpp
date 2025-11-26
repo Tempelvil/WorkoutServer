@@ -171,6 +171,62 @@ std::vector<Sets> selectSetsJoined(sqlite3* db)
         out.push_back(std::move(s));
     }
 
+
+
     sqlite3_finalize(stm);
     return out;
+}
+
+bool deleteWorkout(sqlite3* db, int workout_id) {
+    const char* sql = "DELETE FROM workouts WHERE id = ?1;";
+    sqlite3_stmt* stm = nullptr;
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stm, nullptr) != SQLITE_OK) {
+        std::cerr << "Prepare deleteWorkout failed : " << sqlite3_errmsg(db) << "\n";
+        return false;
+    }
+    sqlite3_bind_int(stm, 1, workout_id);
+    
+    bool ok = (sqlite3_step(stm) == SQLITE_DONE);
+    if (!ok) {
+        std::cerr << "deleteWorkout step error: " << sqlite3_errmsg(db) << "\n";
+    }
+    sqlite3_finalize(stm);
+    return ok;
+}
+
+bool deleteExercise(sqlite3* db, int exercies_id) {
+    const char* sql = "DELETE FROM exercises WHERE id = ?1;";
+    sqlite3_stmt* stm = nullptr;
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stm, nullptr) != SQLITE_OK) {
+        std::cerr << "Prepare deleteExercise failed : " << sqlite3_errmsg(db) << "\n";
+        return false;
+    }
+    sqlite3_bind_int(stm, 1, exercies_id);
+
+    bool ok = (sqlite3_step(stm) == SQLITE_DONE);
+    if (!ok) {
+        std::cerr << "deleteExercise step error: " << sqlite3_errmsg(db) << "\n";
+    }
+    sqlite3_finalize(stm);
+    return ok;
+}
+
+bool deleteSets(sqlite3* db, int sets_id) {
+    const char* sql = "DELETE FROM sets WHERE id = ?1;";
+    sqlite3_stmt* stm = nullptr;
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stm, nullptr) != SQLITE_OK) {
+        std::cerr << "Prepare deleteSets failed : " << sqlite3_errmsg(db) << "\n";
+        return false;
+    }
+    sqlite3_bind_int(stm, 1, sets_id);
+
+    bool ok = (sqlite3_step(stm) == SQLITE_DONE);
+    if (!ok) {
+        std::cerr << "deleteSets step error: " << sqlite3_errmsg(db) << "\n";
+    }
+    sqlite3_finalize(stm);
+    return ok;
 }
