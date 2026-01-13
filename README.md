@@ -22,3 +22,11 @@ mkdir build
 cd build
 cmake ..
 cmake --build .
+## Структура проекта
+WorkoutServer/
+├── src/ # исходный код серверной логики
+├── public/ # публичные ресурсы
+├── vcpkg/ # зависимости (vcpkg)
+├── CMakeLists.txt # конфигурация сборки
+├── vcpkg.json # описание зависимостей
+├── build.bat # скрипт сборки под Windows
