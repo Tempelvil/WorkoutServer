@@ -12,9 +12,9 @@ WorkoutServer — серверный проект на C++, разработан
 - CMake
 - SQLite
 - STL
-- DRAGON
+- DRAGON (HTTP-серверная библиотека)
 
-Сборка и запуск:
+## Сборка и запуск:
 ```bash
 git clone https://github.com/Tempelvil/WorkoutServer.git
 cd WorkoutServer
@@ -22,7 +22,10 @@ mkdir build
 cd build
 cmake ..
 cmake --build .
-## Структура проекта
+```
+
+## Структура проекта:
+```text
 WorkoutServer/
 ├── src/ # исходный код серверной логики
 ├── public/ # публичные ресурсы
